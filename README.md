@@ -1,10 +1,6 @@
-<div align="center>
-
 # Whiteboard Practice for Epicodus
 
 ### By: Paige Tiedeman
-
-</div>
 
 ## Prompts:
 
