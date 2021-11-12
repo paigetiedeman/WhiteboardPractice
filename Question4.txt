@@ -9,3 +9,39 @@ Output: false
 Input: "copyright"
 
 Output: true
+
+//Questions
+1. Can I use JS to solve this problem?
+2. Will the string contain special characters?
+3. Can I use string methods?
+
+// Solution
+1. take string, not use array methods????
+2. Use Set to take all unique values 
+3. if new set values = string length then return true
+
+function isUnique(input){
+  return new Set(input).size == input.length;
+}
+
+console.log(isUnique('hello'));
+console.log(isUnique('copyright'));
+
+// Array method
+function isUnique(input){
+  let char = {};
+  for (let i = 0; i < input.length; i++){
+    if (char[input[i]]){
+      return false;
+    }
+    char[input[i]] = true;
+  }
+  return true;
+}
+
+console.log(isUnique('hello'));
+console.log(isUnique('copyright'));
+
+
+// Resources
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
