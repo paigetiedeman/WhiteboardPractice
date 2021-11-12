@@ -8,9 +8,6 @@ Input: "Jasmine Ann Jones"
 
 Output: "Jasmine%20Ann%20Jones"
 
-// Resources
-* https://stackoverflow.com/questions/441018/replacing-spaces-with-underscores-in-javascript
-
 // Questions to ask:
 1. Can I use JS to solve this problem?
 2. Can I assume that the input will always be a string?
@@ -38,3 +35,6 @@ const replaceString = (input, index = 0, url = "") => {
 }
 
 console.log(replaceString("Jasmine Ann Jones"));
+
+// Resources
+* https://stackoverflow.com/questions/441018/replacing-spaces-with-underscores-in-javascript

@@ -37,3 +37,23 @@ function compressString(input) {
 
 let input = "aaabccdddda";
 console.log(compressString(input));
+
+// Recursion?
+const compressString = (input, i = 0, count = 1, output = "") => {
+  if (i === input.length) {
+    return output;
+  }
+  if (input[i] === input[i + 1]) {
+    count++;
+  } else {
+    if (count === 1) {
+      output += input[i];
+    } else {
+      output += count + input[i]
+    }
+    count = 1;
+  }
+  return compressString(input, ++i, count, output);
+}
+
+console.log(compressString("aaabccdddda"));
