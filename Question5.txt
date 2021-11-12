@@ -1,11 +1,11 @@
 Array Sorting
 Write an algorithm that sorts an array without using the sort() method. There are many different sorting algorithms - take the time to read about the following:
 
-Quick sort
-Merge sort
+Quick sort -- too long
+Merge sort -- 2 different functions
 Heap sort
 Insertion sort
-Bubble sort
+Bubble sort -- used previously/familiar with 
 Selection sort
 
 You may implement any of the above algorithms (or your own) to solve the problem - as long as it doesn't use sort().
@@ -14,3 +14,32 @@ Example
 Input: [9, 2, 7, 12]
 
 Output: [2, 7, 9, 12]
+
+// Bubble Sort 
+
+function bubbleSort(input) {
+  let n = input.length;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      if(input[j] > input[j+1]) {
+        let t = input[j];
+        input[j] = input[j+1];
+        input[j+1] = t;
+      }
+    }
+  }
+  return input;
+}
+
+let array = [9, 2, 7, 12];
+console.log(bubbleSort(array));
+
+// .sort() method
+let input = [9, 2, 7, 12]
+input.sort(function (a, b) { 
+  return a-b; 
+});
+console.log(input);
+
+// Resources
+https://stackabuse.com/bubble-sort-and-cocktail-shaker-sort-in-javascript/
