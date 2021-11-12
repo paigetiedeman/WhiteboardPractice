@@ -2,6 +2,8 @@
 
 ### By: Paige Tiedeman
 
+### See Solution folder for assigned prompt
+
 ## Prompts:
 
 ### Question #1: Turning Strings to URLs
