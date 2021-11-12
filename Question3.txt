@@ -5,3 +5,30 @@ Example
 Input: "aaabccdddda"
 
 Output: "3ab2c4da"
+
+// Questions
+1. Can I use JavaScript to solve the problem?
+2. Can I always expect a string of letters?
+3. Can I use built-in methods to solve this problem?
+
+// Solution
+1. takes string, separates similar numbers 
+2. counts the number of repeated characters of that letter
+3. replaces the repeated character with a number
+4. adds on the letter to the number if repeated
+
+function compressString(input) {
+  let count = 0;
+  let output = "";
+  for (let i = 0; i < input.length; i++) {
+    count ++;
+    if (input[i] !== input[i + 1]) {
+      input[i] + count;
+      count = 0;
+    }
+  }
+  return output;
+}
+
+let input = "aaabccdddda";
+console.log(compressString(input));

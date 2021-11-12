@@ -25,3 +25,16 @@ function replaceSpace(string) {
 }
 console.log(replaceSpace("Jasmine Ann Jones"));
 
+// With recursion
+const replaceString = (input, index = 0, url = "") => {
+  if (index === input.length){
+    return url;
+  } if (input[index] === " "){
+    url += "%20";
+  } else {
+    url += input[index];
+  }
+  return replaceString(input, ++index, url);
+}
+
+console.log(replaceString("Jasmine Ann Jones"));
