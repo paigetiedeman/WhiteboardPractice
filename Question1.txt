@@ -1,0 +1,27 @@
+Turning Strings to URLs
+URLs cannot have spaces. Instead, all spaces in a string are replaced with %20. Write an algorithm that replaces all spaces in a string with %20.
+
+You may not use the replace() method or regular expressions to solve this problem. Solve the problem with and without recursion.
+
+Example
+Input: "Jasmine Ann Jones"
+
+Output: "Jasmine%20Ann%20Jones"
+
+// Resources
+* https://stackoverflow.com/questions/441018/replacing-spaces-with-underscores-in-javascript
+
+// Questions to ask:
+1. Can I use JS to solve this problem?
+2. Can I assume that the input will always be a string?
+3. Can I use JS built in methods to solve this problem?
+
+//Solution:
+ - split at each space and join replaces each space with %20 creating a new string
+
+function replaceSpace(string) {
+  let url = string.split(' ').join('%20'); 
+  return url;
+}
+console.log(replaceSpace("Jasmine Ann Jones"));
+
