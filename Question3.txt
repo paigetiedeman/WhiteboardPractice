@@ -18,13 +18,18 @@ Output: "3ab2c4da"
 4. adds on the letter to the number if repeated
 
 function compressString(input) {
-  let count = 0;
+  let count = 1;
   let output = "";
   for (let i = 0; i < input.length; i++) {
-    count ++;
-    if (input[i] !== input[i + 1]) {
-      input[i] + count;
-      count = 0;
+    if (input[i + 1] === input[i]) {
+      count ++;
+    } else {
+      if (count === 1){
+        output += input[i];
+      } else {
+        output += count + input[i];
+      }
+      count = 1;
     }
   }
   return output;
