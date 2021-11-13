@@ -1,0 +1,29 @@
+Prompt #2
+
+// array deduping
+// remove duplicates
+// don't use filter, then solve with filter
+// expect #s and letters
+// input = [7, "hi", 12, "hi", 7, 9]
+// output = [7, "hi", 12, 9]
+
+// take the array recognize duplicates
+// remove the duplicates
+// return a new array
+
+function removeDuplicates(input){
+	return[...new Set(input)];
+}
+let input = [7, "hi", 12, "hi", 7, 9];
+console.log(removeDuplicates(input));
+
+function removeDuplicates(input){
+	let newArray = input.filter((e, index) => {
+	return input.indexOf(e) === index;
+})
+return newArray;
+}
+let input = [7, "hi", 12, "hi", 7, 9];
+console.log(removeDuplicates(input));
+
+Solved!

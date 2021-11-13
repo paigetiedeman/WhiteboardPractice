@@ -2,7 +2,7 @@
 
 ### By: Paige Tiedeman
 
-### See Solution folder for assigned prompt
+### See Solution folder for assigned prompt #2
 
 ## Prompts:
 
